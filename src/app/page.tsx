@@ -108,11 +108,11 @@ export default function HomePage() {
               <div className="pulse-glow absolute inset-0 bg-gradient-to-br from-blue-500/20 to-violet-500/10 rounded-full blur-2xl" />
               <div className="hero-image-float relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80"
+                  src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&q=80"
                   alt="Business laptops"
                   width={500}
                   height={350}
-                  className="rounded-2xl shadow-2xl shadow-blue-500/10 border border-white/10 ring-1 ring-blue-400/20"
+                  className="object-contain drop-shadow-2xl rounded-2xl"
                   priority
                 />
                 {/* Floating badge */}
@@ -312,7 +312,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
             {[
               {
-                src: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=500&q=80",
+                src: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500&q=80&fit=crop",
                 title: "Business Laptops",
                 subtitle: "Dell, HP, Lenovo & more",
                 tag: "Most Popular",
@@ -320,7 +320,7 @@ export default function HomePage() {
                 bg: "from-blue-950/50 to-slate-900/50",
               },
               {
-                src: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=500&q=80",
+                src: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&q=80&fit=crop",
                 title: "Premium Selection",
                 subtitle: "MacBooks & Surface Pro",
                 tag: "High Demand",
@@ -328,7 +328,7 @@ export default function HomePage() {
                 bg: "from-violet-950/50 to-slate-900/50",
               },
               {
-                src: "https://images.unsplash.com/photo-1629131726692-1acfc0d42f46?w=500&q=80",
+                src: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=500&q=80&fit=crop",
                 title: "Bulk Orders",
                 subtitle: "Volume pricing available",
                 tag: "Best Value",
