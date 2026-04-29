@@ -54,7 +54,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold">Phone</p>
-                      <p className="text-white/50">(800) 555-0199</p>
+                      <p className="text-white/50">(646) 371-0603</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -65,7 +65,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold">Email</p>
-                      <p className="text-white/50">sales@ultra-us.com</p>
+                      <p className="text-white/50">info@ultraedgehub.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
