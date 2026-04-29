@@ -312,50 +312,55 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
             {[
               {
-                src: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&q=80",
+                src: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=500&q=80",
                 title: "Business Laptops",
                 subtitle: "Dell, HP, Lenovo & more",
                 tag: "Most Popular",
                 tagColor: "from-blue-500 to-cyan-400",
+                bg: "from-blue-950/50 to-slate-900/50",
               },
               {
-                src: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&q=80",
+                src: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=500&q=80",
                 title: "Premium Selection",
                 subtitle: "MacBooks & Surface Pro",
                 tag: "High Demand",
                 tagColor: "from-violet-500 to-purple-400",
+                bg: "from-violet-950/50 to-slate-900/50",
               },
               {
-                src: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80",
+                src: "https://images.unsplash.com/photo-1629131726692-1acfc0d42f46?w=500&q=80",
                 title: "Bulk Orders",
                 subtitle: "Volume pricing available",
                 tag: "Best Value",
                 tagColor: "from-amber-500 to-orange-400",
+                bg: "from-amber-950/30 to-slate-900/50",
               },
             ].map((card, i) => (
               <ScrollReveal key={card.title} delay={i * 150}>
-                <div className="group relative rounded-2xl overflow-hidden h-[280px] sm:h-[320px] md:h-[360px] border border-white/10 cursor-pointer hover:border-blue-400/30 transition-colors duration-500">
-                  <Image
-                    src={card.src}
-                    alt={card.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 group-hover:from-black/90 transition-all duration-500" />
-
+                <div className={`group relative rounded-2xl overflow-hidden h-[280px] sm:h-[320px] md:h-[360px] border border-white/10 cursor-pointer hover:border-blue-400/30 transition-all duration-500 bg-gradient-to-b ${card.bg} flex flex-col`}>
                   {/* Tag */}
-                  <div className="absolute top-5 left-5">
+                  <div className="absolute top-5 left-5 z-10">
                     <span className={`px-3 py-1 bg-gradient-to-r ${card.tagColor} text-white text-[11px] font-semibold tracking-wide uppercase rounded-full shadow-lg`}>
                       {card.tag}
                     </span>
                   </div>
 
+                  {/* Image - contained, centered */}
+                  <div className="flex-1 flex items-center justify-center px-8 pt-12 pb-4">
+                    <Image
+                      src={card.src}
+                      alt={card.title}
+                      width={320}
+                      height={200}
+                      className="object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2"
+                    />
+                  </div>
+
                   {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-7">
+                  <div className="p-6 pt-0">
                     <h3 className="text-white font-extrabold text-xl">{card.title}</h3>
-                    <p className="text-white/50 text-sm mt-1.5">{card.subtitle}</p>
-                    <div className="mt-4 flex items-center gap-2 text-blue-300 text-sm font-semibold opacity-100 md:opacity-0 translate-y-0 md:translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                    <p className="text-white/50 text-sm mt-1">{card.subtitle}</p>
+                    <div className="mt-3 flex items-center gap-2 text-blue-300 text-sm font-semibold opacity-100 md:opacity-0 translate-y-0 md:translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                       Learn more
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
