@@ -23,8 +23,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
           {/* Form */}
           <div className="lg:col-span-2">
             <h2 className="text-[24px] font-extrabold text-[#0a0a0a]">Request a <span className="gradient-text">Quote</span></h2>

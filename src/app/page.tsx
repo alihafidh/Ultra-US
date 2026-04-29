@@ -47,7 +47,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[650px] flex items-center overflow-hidden animated-gradient noise">
+      <section className="relative min-h-[500px] md:min-h-[650px] flex items-center overflow-hidden animated-gradient noise">
         {/* Colored orbs */}
         <div className="orb-blue absolute top-10 right-[15%] w-[500px] h-[500px] bg-blue-500/[0.08] rounded-full blur-[100px] pointer-events-none" />
         <div className="orb-indigo absolute bottom-0 left-[5%] w-[400px] h-[400px] bg-violet-500/[0.06] rounded-full blur-[80px] pointer-events-none" />
@@ -67,36 +67,36 @@ export default function HomePage() {
           }}
         />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <div className="animate-fade-up">
-                <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-500/10 border border-blue-400/20 rounded-full text-blue-300 text-xs font-semibold tracking-wider uppercase mb-6">
+                <span className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 bg-blue-500/10 border border-blue-400/20 rounded-full text-blue-300 text-[11px] md:text-xs font-semibold tracking-wider uppercase mb-4 md:mb-6">
                   <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" />
                   Wholesale Laptop Distributor
                 </span>
               </div>
-              <h1 className="animate-fade-up animate-fade-up-delay-1 text-[42px] md:text-[56px] font-extrabold text-white leading-[1.08] tracking-tight">
+              <h1 className="animate-fade-up animate-fade-up-delay-1 text-[32px] sm:text-[42px] md:text-[56px] font-extrabold text-white leading-[1.08] tracking-tight">
                 High-Quality Laptops,{" "}
                 <span className="text-shimmer">
                   Exceptional Service
                 </span>
               </h1>
-              <p className="animate-fade-up animate-fade-up-delay-2 mt-6 text-[17px] text-white/50 leading-relaxed max-w-lg">
+              <p className="animate-fade-up animate-fade-up-delay-2 mt-4 md:mt-6 text-[15px] md:text-[17px] text-white/50 leading-relaxed max-w-lg">
                 Ultra US is a US-based wholesale distributor of business-grade laptops
                 and consumer electronics with competitive pricing to meet the growing
                 demand for quality technology.
               </p>
-              <div className="animate-fade-up animate-fade-up-delay-3 mt-10 flex flex-wrap gap-4">
+              <div className="animate-fade-up animate-fade-up-delay-3 mt-8 md:mt-10 flex flex-wrap gap-3 md:gap-4">
                 <Link
                   href="/contact"
-                  className="relative bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-8 py-3.5 rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 text-sm shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5"
+                  className="relative bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 text-sm shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5"
                 >
                   Contact Us Now
                 </Link>
                 <Link
                   href="/about"
-                  className="glass text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-white/10 transition-all duration-300 text-sm"
+                  className="glass text-white font-semibold px-6 md:px-8 py-3 md:py-3.5 rounded-lg hover:bg-white/10 transition-all duration-300 text-sm"
                 >
                   Learn More
                 </Link>
@@ -134,25 +134,25 @@ export default function HomePage() {
       </section>
 
       {/* Stats bar */}
-      <section className="relative -mt-14 z-10 px-4 sm:px-6 lg:px-8">
+      <section className="relative -mt-10 md:-mt-14 z-10 px-4 sm:px-6 lg:px-8">
         <ScrollReveal direction="scale">
-          <div className="max-w-5xl mx-auto gradient-border p-2">
-            <div className="bg-white rounded-[14px] overflow-hidden">
+          <div className="max-w-5xl mx-auto gradient-border p-1.5 md:p-2">
+            <div className="bg-white rounded-[12px] md:rounded-[14px] overflow-hidden">
               <div className="grid grid-cols-2 md:grid-cols-4">
                 {stats.map((stat, i) => (
                   <div
                     key={stat.label}
-                    className={`group text-center py-7 px-4 hover:bg-blue-50/50 transition-colors duration-300 ${i < stats.length - 1 ? "md:border-r md:border-gray-100" : ""}`}
+                    className={`group text-center py-5 md:py-7 px-3 md:px-4 hover:bg-blue-50/50 transition-colors duration-300 ${i < stats.length - 1 ? "md:border-r md:border-gray-100" : ""} ${i < 2 ? "border-b md:border-b-0 border-gray-100" : ""}`}
                   >
-                    <div className="flex justify-center mb-2">
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white opacity-80 group-hover:opacity-100 transition-opacity">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="flex justify-center mb-1.5 md:mb-2">
+                      <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white opacity-80 group-hover:opacity-100 transition-opacity">
+                        <svg className="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={stat.icon} />
                         </svg>
                       </div>
                     </div>
-                    <p className="text-[36px] font-extrabold gradient-text-blue leading-none tracking-tight">{stat.value}</p>
-                    <p className="mt-1.5 text-[12px] text-gray-400 font-medium tracking-wide uppercase">{stat.label}</p>
+                    <p className="text-[28px] md:text-[36px] font-extrabold gradient-text-blue leading-none tracking-tight">{stat.value}</p>
+                    <p className="mt-1 md:mt-1.5 text-[10px] md:text-[12px] text-gray-400 font-medium tracking-wide uppercase">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -162,9 +162,9 @@ export default function HomePage() {
       </section>
 
       {/* Why do business with us */}
-      <section className="py-24 mesh-gradient">
+      <section className="py-16 md:py-24 mesh-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <ScrollReveal direction="left">
               <div>
                 <span className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-600 text-xs font-semibold rounded-full tracking-wide uppercase">
@@ -173,7 +173,7 @@ export default function HomePage() {
                   </svg>
                   About Us
                 </span>
-                <h2 className="mt-4 text-[34px] font-extrabold text-[#0a0a0a] leading-tight">
+                <h2 className="mt-4 text-[26px] md:text-[34px] font-extrabold text-[#0a0a0a] leading-tight">
                   Why Do Business<br />With <span className="gradient-text">Ultra US</span>?
                 </h2>
                 <div className="mt-6 space-y-4 text-[15px] text-gray-500 leading-relaxed">
@@ -210,7 +210,7 @@ export default function HomePage() {
                   className="rounded-2xl shadow-lg ring-1 ring-black/5"
                 />
                 {/* Overlay grid badges */}
-                <div className="absolute -bottom-6 -left-6 grid grid-cols-2 gap-2">
+                <div className="absolute -bottom-4 -left-2 md:-bottom-6 md:-left-6 grid grid-cols-2 gap-1.5 md:gap-2">
                   {[
                     { icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", label: "Quality", gradient: "from-blue-500 to-cyan-400" },
                     { icon: "M13 10V3L4 14h7v7l9-11h-7z", label: "Speed", gradient: "from-amber-500 to-orange-400" },
@@ -236,10 +236,10 @@ export default function HomePage() {
       {/* CTA band */}
       <section className="animated-gradient noise relative overflow-hidden">
         <div className="orb-blue absolute -top-20 -right-20 w-[300px] h-[300px] bg-blue-500/[0.06] rounded-full blur-[80px] pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-6 relative z-10 text-center md:text-left">
           <ScrollReveal direction="left">
             <div>
-              <h2 className="text-[28px] font-extrabold text-white">How Can We Help?</h2>
+              <h2 className="text-[22px] md:text-[28px] font-extrabold text-white">How Can We Help?</h2>
               <p className="mt-1 text-white/40 text-[15px]">
                 Tell us what you need — our team is ready to find the right solution.
               </p>
@@ -257,14 +257,14 @@ export default function HomePage() {
       </section>
 
       {/* 3 Pillars */}
-      <section className="py-24 bg-[#fafafa] mesh-gradient">
+      <section className="py-16 md:py-24 bg-[#fafafa] mesh-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 md:mb-16">
               <span className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-600 text-xs font-semibold rounded-full tracking-wide uppercase">
                 What We Do
               </span>
-              <h2 className="mt-4 text-[34px] font-extrabold text-[#0a0a0a]">
+              <h2 className="mt-4 text-[26px] md:text-[34px] font-extrabold text-[#0a0a0a]">
                 Built for <span className="gradient-text">Wholesale</span>
               </h2>
               <p className="mt-3 text-gray-400 text-[15px] max-w-md mx-auto">
@@ -272,10 +272,10 @@ export default function HomePage() {
               </p>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {pillars.map((pillar, i) => (
               <ScrollReveal key={pillar.title} delay={i * 150}>
-                <div className="card-hover bg-white rounded-2xl p-8 border border-gray-200/60 h-full group">
+                <div className="card-hover bg-white rounded-2xl p-6 md:p-8 border border-gray-200/60 h-full group">
                   <div className={`w-14 h-14 bg-gradient-to-br ${pillar.color} rounded-xl flex items-center justify-center mb-6 text-white shadow-lg shadow-blue-500/10 group-hover:scale-110 transition-transform duration-300`}>
                     {pillar.icon}
                   </div>
@@ -291,7 +291,7 @@ export default function HomePage() {
       </section>
 
       {/* Product showcase */}
-      <section className="py-24 animated-gradient noise relative overflow-hidden">
+      <section className="py-16 md:py-24 animated-gradient noise relative overflow-hidden">
         <div className="orb-blue absolute top-20 left-[10%] w-[400px] h-[400px] bg-blue-500/[0.06] rounded-full blur-[80px] pointer-events-none" />
         <div className="orb-indigo absolute bottom-0 right-[10%] w-[300px] h-[300px] bg-violet-500/[0.05] rounded-full blur-[60px] pointer-events-none" />
         <div className="spin-slow absolute bottom-0 right-[5%] w-[250px] h-[250px] border border-blue-400/[0.06] rounded-full pointer-events-none" />
@@ -301,7 +301,7 @@ export default function HomePage() {
               <span className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 border border-blue-400/20 text-blue-300 text-xs font-semibold rounded-full tracking-wide uppercase">
                 Our Inventory
               </span>
-              <h2 className="mt-4 text-[34px] font-extrabold text-white">
+              <h2 className="mt-4 text-[26px] md:text-[34px] font-extrabold text-white">
                 What We Carry
               </h2>
               <p className="mt-3 text-white/40 text-[15px] max-w-md mx-auto">
@@ -309,24 +309,24 @@ export default function HomePage() {
               </p>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
             {[
               {
-                src: "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=600&q=80",
+                src: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&q=80",
                 title: "Business Laptops",
                 subtitle: "Dell, HP, Lenovo & more",
                 tag: "Most Popular",
                 tagColor: "from-blue-500 to-cyan-400",
               },
               {
-                src: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=600&q=80",
+                src: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&q=80",
                 title: "Premium Selection",
                 subtitle: "MacBooks & Surface Pro",
                 tag: "High Demand",
                 tagColor: "from-violet-500 to-purple-400",
               },
               {
-                src: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=600&q=80",
+                src: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&q=80",
                 title: "Bulk Orders",
                 subtitle: "Volume pricing available",
                 tag: "Best Value",
@@ -334,7 +334,7 @@ export default function HomePage() {
               },
             ].map((card, i) => (
               <ScrollReveal key={card.title} delay={i * 150}>
-                <div className="group relative rounded-2xl overflow-hidden h-[360px] border border-white/10 cursor-pointer hover:border-blue-400/30 transition-colors duration-500">
+                <div className="group relative rounded-2xl overflow-hidden h-[280px] sm:h-[320px] md:h-[360px] border border-white/10 cursor-pointer hover:border-blue-400/30 transition-colors duration-500">
                   <Image
                     src={card.src}
                     alt={card.title}
@@ -355,7 +355,7 @@ export default function HomePage() {
                   <div className="absolute bottom-0 left-0 right-0 p-7">
                     <h3 className="text-white font-extrabold text-xl">{card.title}</h3>
                     <p className="text-white/50 text-sm mt-1.5">{card.subtitle}</p>
-                    <div className="mt-4 flex items-center gap-2 text-blue-300 text-sm font-semibold opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                    <div className="mt-4 flex items-center gap-2 text-blue-300 text-sm font-semibold opacity-100 md:opacity-0 translate-y-0 md:translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                       Learn more
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -378,8 +378,8 @@ export default function HomePage() {
         <div className="orb-indigo absolute bottom-0 left-[20%] w-[250px] h-[250px] bg-violet-500/[0.06] rounded-full blur-[60px] pointer-events-none" />
         <div className="spin-slow absolute bottom-0 left-[10%] w-[200px] h-[200px] border border-blue-400/[0.06] rounded-full pointer-events-none" />
         <ScrollReveal>
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center relative z-10">
-            <h2 className="text-[36px] font-extrabold text-white leading-tight">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center relative z-10">
+            <h2 className="text-[28px] md:text-[36px] font-extrabold text-white leading-tight">
               Ready to <span className="text-shimmer">Get Started</span>?
             </h2>
             <p className="mt-5 text-white/40 text-[15px] leading-relaxed max-w-xl mx-auto">

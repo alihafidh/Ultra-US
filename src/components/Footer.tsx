@@ -4,10 +4,10 @@ export default function Footer() {
   return (
     <footer className="bg-[#050510] text-gray-500 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
           {/* Brand */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <p className="text-[22px] font-extrabold tracking-tight">
               <span className="text-white">ULTRA</span>{" "}
               <span className="gradient-text-blue">US</span>

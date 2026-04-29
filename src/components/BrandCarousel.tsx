@@ -125,14 +125,14 @@ export default function BrandCarousel() {
   }, [isPaused]);
 
   return (
-    <section className="py-20 bg-white border-y border-gray-100">
+    <section className="py-14 md:py-20 bg-white border-y border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <span className="inline-block px-3 py-1 bg-gray-100 text-gray-500 text-xs font-semibold rounded-full tracking-wide uppercase">
             Our Partners
           </span>
-          <h2 className="mt-4 text-[34px] font-extrabold text-[#0a0a0a]">
+          <h2 className="mt-4 text-[26px] md:text-[34px] font-extrabold text-[#0a0a0a]">
             Brands We Distribute
           </h2>
           <p className="mt-3 text-gray-400 text-[15px] max-w-md mx-auto">
@@ -144,7 +144,7 @@ export default function BrandCarousel() {
           {/* Left arrow */}
           <button
             onClick={() => scroll("left")}
-            className="shrink-0 w-11 h-11 bg-[#0a0a0a] rounded-lg flex items-center justify-center text-white hover:bg-[#1a1a1a] transition-colors duration-200"
+            className="shrink-0 w-9 h-9 md:w-11 md:h-11 bg-[#0a0a0a] rounded-lg flex items-center justify-center text-white hover:bg-[#1a1a1a] transition-colors duration-200"
             aria-label="Scroll left"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,7 +163,7 @@ export default function BrandCarousel() {
               {allBrands.map((brand, i) => (
                 <div
                   key={`${brand.name}-${i}`}
-                  className="shrink-0 w-[220px] h-[90px] flex items-center justify-center transition-opacity duration-300 hover:opacity-80 select-none"
+                  className="shrink-0 w-[160px] md:w-[220px] h-[70px] md:h-[90px] flex items-center justify-center transition-opacity duration-300 hover:opacity-80 select-none"
                 >
                   {brand.logo}
                 </div>
@@ -174,7 +174,7 @@ export default function BrandCarousel() {
           {/* Right arrow */}
           <button
             onClick={() => scroll("right")}
-            className="shrink-0 w-11 h-11 bg-[#0a0a0a] rounded-lg flex items-center justify-center text-white hover:bg-[#1a1a1a] transition-colors duration-200"
+            className="shrink-0 w-9 h-9 md:w-11 md:h-11 bg-[#0a0a0a] rounded-lg flex items-center justify-center text-white hover:bg-[#1a1a1a] transition-colors duration-200"
             aria-label="Scroll right"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

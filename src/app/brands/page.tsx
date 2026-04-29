@@ -112,7 +112,7 @@ export default function BrandsPage() {
               <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" />
               Our Brands
             </span>
-            <h1 className="text-[42px] md:text-[56px] font-extrabold text-white leading-[1.08] tracking-tight animate-fade-up animate-fade-up-delay-1">
+            <h1 className="text-[32px] sm:text-[42px] md:text-[56px] font-extrabold text-white leading-[1.08] tracking-tight animate-fade-up animate-fade-up-delay-1">
               Brands We{" "}
               <span className="text-shimmer">Distribute</span>
             </h1>
@@ -162,7 +162,7 @@ export default function BrandsPage() {
       </section>
 
       {/* Brands grid */}
-      <section className="py-24 mesh-gradient">
+      <section className="py-16 md:py-24 mesh-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {brands.map((brand, i) => (
@@ -171,7 +171,7 @@ export default function BrandsPage() {
                   {/* Top colored accent bar */}
                   <div className="h-1 w-full" style={{ backgroundColor: brand.color }} />
 
-                  <div className="p-8">
+                  <div className="p-5 md:p-8">
                     <div className="flex items-start gap-5 mb-5">
                       {/* Logo box */}
                       <div
@@ -262,7 +262,7 @@ export default function BrandsPage() {
         <div className="spin-slow absolute bottom-0 left-[10%] w-[200px] h-[200px] border border-blue-400/[0.06] rounded-full pointer-events-none" />
         <ScrollReveal>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center relative z-10">
-            <h2 className="text-[36px] font-extrabold text-white leading-tight">
+            <h2 className="text-[28px] md:text-[36px] font-extrabold text-white leading-tight">
               Need <span className="text-shimmer">Bulk Pricing</span>?
             </h2>
             <p className="mt-5 text-white/40 text-[15px] leading-relaxed max-w-xl mx-auto">

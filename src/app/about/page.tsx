@@ -37,7 +37,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-14">
           <ScrollReveal direction="left" className="lg:col-span-3">
             <div>
-              <h2 className="text-[28px] font-extrabold text-[#0a0a0a] leading-tight">
+              <h2 className="text-[22px] md:text-[28px] font-extrabold text-[#0a0a0a] leading-tight">
                 Established 2025. Over 20 Years of <span className="gradient-text">Industry Experience</span>.
               </h2>
               <div className="mt-6 space-y-4 text-[15px] text-gray-500 leading-relaxed">
@@ -105,7 +105,7 @@ export default function AboutPage() {
             <span className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-600 text-xs font-semibold rounded-full tracking-wide uppercase">
               Our Values
             </span>
-            <h2 className="mt-3 text-[28px] font-extrabold text-[#0a0a0a]">What Sets Us <span className="gradient-text">Apart</span></h2>
+            <h2 className="mt-3 text-[22px] md:text-[28px] font-extrabold text-[#0a0a0a]">What Sets Us <span className="gradient-text">Apart</span></h2>
           </ScrollReveal>
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
             {[
@@ -165,7 +165,7 @@ export default function AboutPage() {
             <span className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-600 text-xs font-semibold rounded-full tracking-wide uppercase">
               Our Clients
             </span>
-            <h2 className="mt-3 text-[28px] font-extrabold text-[#0a0a0a]">Who We Serve</h2>
+            <h2 className="mt-3 text-[22px] md:text-[28px] font-extrabold text-[#0a0a0a]">Who We Serve</h2>
           </ScrollReveal>
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -189,10 +189,10 @@ export default function AboutPage() {
 
         {/* CTA */}
         <ScrollReveal>
-          <section className="mt-20 animated-gradient noise rounded-2xl p-10 md:p-14 text-center relative overflow-hidden">
+          <section className="mt-14 md:mt-20 animated-gradient noise rounded-2xl p-8 md:p-14 text-center relative overflow-hidden">
             <div className="orb-blue absolute top-0 right-[20%] w-[200px] h-[200px] bg-blue-500/[0.1] rounded-full blur-[60px] pointer-events-none" />
             <div className="relative z-10">
-              <h2 className="text-[28px] font-extrabold text-white">Let&apos;s Work <span className="text-shimmer">Together</span></h2>
+              <h2 className="text-[22px] md:text-[28px] font-extrabold text-white">Let&apos;s Work <span className="text-shimmer">Together</span></h2>
               <p className="mt-4 text-white/40 max-w-lg mx-auto text-[15px]">
                 Whether you have a specific order in mind or want to discuss your procurement needs,
                 our team is ready to help.
