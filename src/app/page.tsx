@@ -346,13 +346,13 @@ export default function HomePage() {
                   </div>
 
                   {/* Image - contained, centered */}
-                  <div className="flex-1 flex items-center justify-center px-8 pt-12 pb-4">
+                  <div className="flex-1 flex items-center justify-center px-6 pt-10 pb-2">
                     <Image
                       src={card.src}
                       alt={card.title}
-                      width={320}
-                      height={200}
-                      className="object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2"
+                      width={400}
+                      height={260}
+                      className="object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2 max-h-[200px] md:max-h-[240px]"
                     />
                   </div>
 
