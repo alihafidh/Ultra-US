@@ -108,11 +108,11 @@ export default function HomePage() {
               <div className="pulse-glow absolute inset-0 bg-gradient-to-br from-blue-500/20 to-violet-500/10 rounded-full blur-2xl" />
               <div className="hero-image-float relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&q=80"
+                  src="/images/laptop-macbook.png"
                   alt="Business laptops"
                   width={500}
                   height={350}
-                  className="object-contain drop-shadow-2xl rounded-2xl"
+                  className="object-contain drop-shadow-2xl"
                   priority
                 />
                 {/* Floating badge */}
@@ -312,7 +312,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
             {[
               {
-                src: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500&q=80&fit=crop",
+                src: "/images/laptop-business.png",
                 title: "Business Laptops",
                 subtitle: "Dell, HP, Lenovo & more",
                 tag: "Most Popular",
@@ -320,7 +320,7 @@ export default function HomePage() {
                 bg: "from-blue-950/50 to-slate-900/50",
               },
               {
-                src: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&q=80&fit=crop",
+                src: "/images/laptop-macbook.png",
                 title: "Premium Selection",
                 subtitle: "MacBooks & Surface Pro",
                 tag: "High Demand",
@@ -328,7 +328,7 @@ export default function HomePage() {
                 bg: "from-violet-950/50 to-slate-900/50",
               },
               {
-                src: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=500&q=80&fit=crop",
+                src: "/images/laptop-bulk.png",
                 title: "Bulk Orders",
                 subtitle: "Volume pricing available",
                 tag: "Best Value",
