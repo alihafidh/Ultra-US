@@ -120,34 +120,32 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Who we serve — visual grid */}
-      <section className="py-14 sm:py-20 md:py-24 bg-blue-600 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-          backgroundSize: "24px 24px",
-        }} />
+      {/* Who we serve */}
+      <section className="py-14 sm:py-20 md:py-24 bg-gray-900 relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <ScrollReveal>
             <div className="text-center mb-10 sm:mb-14">
-              <span className="inline-block px-3 py-1 bg-white/10 text-blue-100 text-[11px] font-semibold uppercase tracking-widest rounded-full mb-3">Our Clients</span>
+              <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-[11px] font-semibold uppercase tracking-widest rounded-full mb-3">Our Clients</span>
               <h2 className="text-[24px] sm:text-[34px] font-extrabold text-white">Who We Serve</h2>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { title: "IT Resellers", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" },
-              { title: "Corporations", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
-              { title: "Education", icon: "M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" },
-              { title: "Government", icon: "M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" },
+              { title: "IT Resellers", desc: "Wholesale inventory access.", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10", color: "bg-blue-500" },
+              { title: "Corporations", desc: "Fleet deployments on time.", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4", color: "bg-violet-500" },
+              { title: "Education", desc: "Classroom-ready laptops.", icon: "M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z", color: "bg-emerald-500" },
+              { title: "Government", desc: "Transparent bulk pricing.", icon: "M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z", color: "bg-amber-500" },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 80}>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-5 sm:p-6 text-center hover:bg-white/15 transition-colors">
-                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <div className="bg-white rounded-2xl p-6 h-full shadow-lg shadow-black/5 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                  <div className={`w-11 h-11 ${item.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />
                     </svg>
                   </div>
-                  <h3 className="text-white font-bold text-[14px]">{item.title}</h3>
+                  <h3 className="text-gray-900 font-bold text-[15px]">{item.title}</h3>
+                  <p className="mt-1 text-gray-400 text-[13px]">{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
