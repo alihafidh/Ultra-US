@@ -123,14 +123,14 @@ export default function HomePage() {
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
-              { src: "/images/laptop-business.png", title: "Business Laptops", desc: "Dell Latitude, HP EliteBook, Lenovo ThinkPad — the machines IT departments trust.", tag: "Most Popular", bg: "bg-blue-50" },
-              { src: "/images/laptop-macbook.png", title: "Premium Devices", desc: "MacBook Pro, MacBook Air, Surface Pro — for teams that demand the best.", tag: "High Demand", bg: "bg-violet-50" },
-              { src: "/images/laptop-bulk.png", title: "Bulk & Custom", desc: "500+ units? Tiered discounts and custom configurations available.", tag: "Best Value", bg: "bg-amber-50" },
+              { src: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&q=80", title: "Business Laptops", desc: "Dell Latitude, HP EliteBook, Lenovo ThinkPad — the machines IT departments trust.", tag: "Most Popular", bg: "bg-blue-50" },
+              { src: "https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?w=600&q=80", title: "Premium Devices", desc: "MacBook Pro, MacBook Air, Surface Pro — for teams that demand the best.", tag: "High Demand", bg: "bg-violet-50" },
+              { src: "https://images.unsplash.com/photo-1587614297882-0954a02d57f7?w=600&q=80", title: "Bulk & Custom", desc: "500+ units? Tiered discounts and custom configurations available.", tag: "Best Value", bg: "bg-amber-50" },
             ].map((card, i) => (
               <ScrollReveal key={card.title} delay={i * 100}>
                 <div className={`card-lift group rounded-2xl border border-gray-100 overflow-hidden h-full bg-white shadow-sm`}>
-                  <div className={`${card.bg} p-6 sm:p-8 flex items-center justify-center h-[180px] sm:h-[220px]`}>
-                    <Image src={card.src} alt={card.title} width={280} height={180} className="object-contain max-h-full transition-transform duration-500 group-hover:scale-105" />
+                  <div className={`${card.bg} relative h-[200px] sm:h-[240px] overflow-hidden`}>
+                    <Image src={card.src} alt={card.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 33vw" />
                   </div>
                   <div className="p-5 sm:p-6">
                     <span className="inline-block text-[10px] font-semibold uppercase tracking-widest text-blue-600 bg-blue-50 px-2 py-0.5 rounded mb-2">{card.tag}</span>
