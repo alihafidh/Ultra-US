@@ -2,36 +2,35 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#050510] text-gray-500 relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+    <footer className="bg-gray-900 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 md:gap-10">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
-            <p className="text-[22px] font-extrabold tracking-tight">
-              <span className="text-white">ULTRA</span>{" "}
-              <span className="gradient-text-blue">US</span>
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-gray-500">
-              A US-based wholesale distributor of business-grade laptops and consumer electronics.
-              Established 2025, backed by 20+ years of industry experience.
+          <div className="col-span-2 sm:col-span-1">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-[12px]">U</span>
+              </div>
+              <span className="text-white font-bold text-[16px]">Ultra US</span>
+            </div>
+            <p className="text-[13px] text-gray-500 leading-relaxed">
+              US-based wholesale laptop distributor serving businesses, resellers, schools, and institutions nationwide.
             </p>
           </div>
 
-          {/* Links */}
           <div>
-            <h3 className="text-[13px] font-bold text-white uppercase tracking-wider mb-5">Useful Links</h3>
-            <ul className="space-y-3 text-sm">
-              <li><Link href="/" className="hover:text-blue-400 transition">Home</Link></li>
-              <li><Link href="/about" className="hover:text-blue-400 transition">About Us</Link></li>
-              <li><Link href="/contact" className="hover:text-blue-400 transition">Contact</Link></li>
+            <h3 className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-4">Company</h3>
+            <ul className="space-y-2.5 text-[13px] text-gray-500">
+              <li><Link href="/" className="hover:text-gray-300 transition">Home</Link></li>
+              <li><Link href="/about" className="hover:text-gray-300 transition">About Us</Link></li>
+              <li><Link href="/brands" className="hover:text-gray-300 transition">Brands</Link></li>
+              <li><Link href="/contact" className="hover:text-gray-300 transition">Contact</Link></li>
             </ul>
           </div>
 
-          {/* Brands */}
           <div>
-            <h3 className="text-[13px] font-bold text-white uppercase tracking-wider mb-5">Brands</h3>
-            <ul className="space-y-3 text-sm">
+            <h3 className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-4">Brands</h3>
+            <ul className="space-y-2.5 text-[13px] text-gray-500">
               <li>Dell</li>
               <li>HP</li>
               <li>Lenovo</li>
@@ -40,35 +39,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h3 className="text-[13px] font-bold text-white uppercase tracking-wider mb-5">Contact Us</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-blue-400 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                </svg>
-                (646) 371-0603
-              </li>
-              <li className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-blue-400 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                </svg>
-                info@ultraedgehub.com
-              </li>
-              <li className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-blue-400 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
-                </svg>
-                Mon – Fri, 9 AM – 6 PM EST
-              </li>
+            <h3 className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-4">Contact</h3>
+            <ul className="space-y-2.5 text-[13px] text-gray-500">
+              <li><a href="tel:+16463710603" className="hover:text-gray-300 transition">(646) 371-0603</a></li>
+              <li><a href="mailto:info@ultraedgehub.com" className="hover:text-gray-300 transition">info@ultraedgehub.com</a></li>
+              <li>Mon – Fri, 9–6 PM EST</li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/5 text-center text-xs text-gray-600">
-          &copy; {new Date().getFullYear()} Ultra US. All rights reserved.
+        <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-2 text-[12px] text-gray-600">
+          <span>&copy; {new Date().getFullYear()} Ultra US. All rights reserved.</span>
+          <span>Wholesale Laptop Distribution</span>
         </div>
       </div>
     </footer>

@@ -7,65 +7,60 @@ export default function QuoteForm({ defaultProduct }: { defaultProduct?: string 
 
   if (submitted) {
     return (
-      <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
-        <div className="text-3xl mb-3">&#10003;</div>
-        <h3 className="text-lg font-bold text-green-800">Thank you for your inquiry</h3>
-        <p className="mt-2 text-sm text-green-700">
-          Our sales team will review your request and get back to you within one business day.
+      <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 text-center">
+        <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h3 className="text-lg font-bold text-gray-900">Inquiry Received</h3>
+        <p className="mt-2 text-[14px] text-gray-500">
+          Our team will review your request and respond within one business day.
         </p>
       </div>
     );
   }
 
   const inputClass =
-    "w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+    "w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[14px] placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent bg-white transition";
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
-      className="space-y-5"
-    >
+    <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="space-y-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-1">Full Name *</label>
+          <label className="block text-[13px] font-semibold text-gray-700 mb-1.5">Full Name *</label>
           <input required type="text" placeholder="John Smith" className={inputClass} />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-1">Company *</label>
+          <label className="block text-[13px] font-semibold text-gray-700 mb-1.5">Company *</label>
           <input required type="text" placeholder="Acme Corp" className={inputClass} />
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-1">Email *</label>
+          <label className="block text-[13px] font-semibold text-gray-700 mb-1.5">Email *</label>
           <input required type="email" placeholder="john@acme.com" className={inputClass} />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-1">Phone</label>
+          <label className="block text-[13px] font-semibold text-gray-700 mb-1.5">Phone</label>
           <input type="tel" placeholder="(555) 123-4567" className={inputClass} />
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-1">Product Interest</label>
+          <label className="block text-[13px] font-semibold text-gray-700 mb-1.5">Product Interest</label>
           <input type="text" defaultValue={defaultProduct || ""} placeholder="e.g. Dell Latitude 5540" className={inputClass} />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-1">Quantity Needed</label>
+          <label className="block text-[13px] font-semibold text-gray-700 mb-1.5">Quantity</label>
           <input type="text" placeholder="e.g. 50, 100, 500+" className={inputClass} />
         </div>
       </div>
       <div>
-        <label className="block text-sm font-semibold text-gray-700 mb-1">Message</label>
+        <label className="block text-[13px] font-semibold text-gray-700 mb-1.5">Message</label>
         <textarea rows={4} placeholder="Tell us about your requirements, timeline, or any questions..." className={`${inputClass} resize-none`} />
       </div>
-      <button
-        type="submit"
-        className="w-full sm:w-auto bg-[#0a0a0a] text-white font-semibold px-9 py-3 rounded-lg hover:bg-[#1a1a1a] transition text-sm"
-      >
+      <button type="submit" className="w-full sm:w-auto bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition text-[14px] shadow-sm shadow-blue-600/20">
         Submit Inquiry
       </button>
     </form>
