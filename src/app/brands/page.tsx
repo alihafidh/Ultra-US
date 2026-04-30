@@ -3,14 +3,14 @@ import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const brands = [
-  { name: "Dell", models: "Latitude · Precision · OptiPlex", accent: "#007DB8" },
-  { name: "HP", models: "EliteBook · ProBook · ProDesk", accent: "#0096D6" },
-  { name: "Lenovo", models: "ThinkPad · ThinkCentre · IdeaPad", accent: "#E2231A" },
-  { name: "Apple", models: "MacBook Pro · MacBook Air · iMac", accent: "#555555" },
-  { name: "ASUS", models: "ExpertBook · ZenBook · VivoBook", accent: "#00539B" },
-  { name: "Acer", models: "TravelMate · Aspire · Swift", accent: "#83B81A" },
-  { name: "Microsoft", models: "Surface Pro · Surface Laptop · Surface Go", accent: "#00A4EF" },
-  { name: "Samsung", models: "Galaxy Book · Galaxy Tab · Odyssey", accent: "#1428A0" },
+  { name: "Dell", models: "Latitude · Precision · OptiPlex", accent: "#007DB8", logo: "https://cdn.worldvectorlogo.com/logos/dell-2.svg" },
+  { name: "HP", models: "EliteBook · ProBook · ProDesk", accent: "#0096D6", logo: "https://cdn.worldvectorlogo.com/logos/hp-2.svg" },
+  { name: "Lenovo", models: "ThinkPad · ThinkCentre · IdeaPad", accent: "#E2231A", logo: "https://cdn.worldvectorlogo.com/logos/lenovo-2.svg" },
+  { name: "Apple", models: "MacBook Pro · MacBook Air · iMac", accent: "#555555", logo: "https://cdn.worldvectorlogo.com/logos/apple-13.svg" },
+  { name: "ASUS", models: "ExpertBook · ZenBook · VivoBook", accent: "#00539B", logo: "https://cdn.worldvectorlogo.com/logos/asus-4.svg" },
+  { name: "Acer", models: "TravelMate · Aspire · Swift", accent: "#83B81A", logo: "https://cdn.worldvectorlogo.com/logos/acer-2.svg" },
+  { name: "Microsoft", models: "Surface Pro · Surface Laptop · Surface Go", accent: "#00A4EF", logo: "https://cdn.worldvectorlogo.com/logos/microsoft-6.svg" },
+  { name: "Samsung", models: "Galaxy Book · Galaxy Tab · Odyssey", accent: "#1428A0", logo: "https://cdn.worldvectorlogo.com/logos/samsung-8.svg" },
 ];
 
 export default function BrandsPage() {
@@ -58,23 +58,21 @@ export default function BrandsPage() {
             {brands.map((brand, i) => (
               <ScrollReveal key={brand.name} delay={i * 50}>
                 <Link href="/contact" className="block group">
-                  <div className="bg-white border-2 border-gray-100 rounded-2xl p-6 sm:p-8 text-center hover:border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full">
-                    {/* Brand name as logo */}
-                    <div className="mb-4">
-                      <span
-                        className="text-[24px] sm:text-[28px] font-extrabold tracking-tight"
-                        style={{ color: brand.accent }}
-                      >
-                        {brand.name}
-                      </span>
+                  <div className="bg-white border-2 border-gray-100 rounded-2xl p-6 sm:p-8 text-center hover:border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col items-center">
+                    {/* Logo */}
+                    <div className="h-10 sm:h-12 flex items-center justify-center mb-5">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={brand.logo}
+                        alt={`${brand.name} logo`}
+                        className="max-h-full max-w-[120px] sm:max-w-[140px] object-contain grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300"
+                      />
                     </div>
-                    {/* Colored line */}
-                    <div className="w-8 h-1 rounded-full mx-auto mb-4" style={{ backgroundColor: brand.accent }} />
                     {/* Models */}
                     <p className="text-[12px] sm:text-[13px] text-gray-400 leading-relaxed">{brand.models}</p>
                     {/* Hover CTA */}
                     <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <span className="text-blue-600 text-[12px] font-semibold">Get Pricing →</span>
+                      <span className="text-blue-600 text-[13px] font-semibold">Get Pricing →</span>
                     </div>
                   </div>
                 </Link>
